@@ -1,0 +1,13 @@
+.PieceFigure {
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
