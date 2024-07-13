@@ -1,4 +1,4 @@
-import {Piece} from "chess.ts";
+import {Color, Piece} from "chess.ts";
 
 export interface Promotion {
     from: string
@@ -7,6 +7,9 @@ export interface Promotion {
 }
 
 export interface GameSubject {
-    pendingPromotion?: Promotion;
     board: (Piece | null)[][]
+    pendingPromotion?: Promotion
+    isGameOver: boolean
+    result?: string | null
+    turn: Color
 }

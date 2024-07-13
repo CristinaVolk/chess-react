@@ -37,7 +37,7 @@ export function BoardSquare(props: BoardSquareProps) {
         })
 
         return () => subscribe.unsubscribe()
-    }, []);
+    }, [position]);
 
     return (
         <div className={classes.square} ref={drop}>
