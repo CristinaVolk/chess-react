@@ -1,10 +1,11 @@
 import React from "react";
+import {PieceSymbol} from "chess.ts";
 
 import {Promotion} from "../../../shared/types";
 import classes from "./PromotionPieces.module.css";
 import {Square} from "../../Square/ui/Square";
 import {move} from "../../../app/game/config";
-import {PieceSymbol} from "chess.js";
+
 
 interface PromotionProps {
     promotion: Promotion
