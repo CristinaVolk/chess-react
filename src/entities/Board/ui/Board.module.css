@@ -4,3 +4,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.boardContainerMobile {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}

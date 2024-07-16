@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from "react"
 import type {Color, Piece} from "chess.ts";
+import {isDesktop} from "react-device-detect";
 
 import classes from "./Board.module.css";
 import {BoardSquare} from "../../BoardSquare/ui/BoardSquare";
+
 
 interface BoardProps {
     board: Piece[][]
@@ -15,7 +17,6 @@ export function Board(props: BoardProps) {
         useState<Piece[]>([])
 
     useEffect(() => {
-        console.log(turn)
         let currBoard = (turn === 'w') ? board.flat() : board.flat().reverse()
         setCurrentBoard(currBoard)
     }, [turn, board]);
@@ -44,7 +45,7 @@ export function Board(props: BoardProps) {
     }
 
     return (
-        <div className={classes.boardContainer}>
+        <div className={isDesktop ? classes.boardContainer : classes.boardContainerMobile}>
             {currentBoard?.map((piece:Piece, index: number) => (
                 <BoardSquare
                     key={index}
