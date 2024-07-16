@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import {createRoot} from "react-dom/client";
-import { HTML5Backend } from 'react-dnd-html5-backend'
+import { HTML5Backend } from "react-dnd-html5-backend"
 import { DndProvider } from 'react-dnd'
-import { TouchBackend } from 'react-dnd-touch-backend';
-import {isMobile} from 'react-device-detect'
+import { TouchBackend } from "react-dnd-touch-backend";
+import {isMobile} from "react-device-detect"
 
 import {App} from "./app/ui/App";
 

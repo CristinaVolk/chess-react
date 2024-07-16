@@ -1,5 +1,6 @@
 import {BLACK, Chess, PartialMove, WHITE} from "chess.ts"
 import {BehaviorSubject} from "rxjs"
+
 import {GameSubject, Promotion} from "../../shared/types";
 import {SAVED_GAME} from "../../shared/consts";
 

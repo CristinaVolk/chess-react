@@ -1,7 +1,9 @@
 import React from "react";
 import type {Piece} from "chess.ts";
-import classes from "./PieceFigure.module.css";
 import {useDrag, DragPreviewImage} from "react-dnd";
+
+import classes from "./PieceFigure.module.css";
+
 
 interface PieceFigureProps {
     piece: Piece

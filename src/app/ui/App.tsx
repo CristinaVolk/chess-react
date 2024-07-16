@@ -1,9 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from "react"
+import type {Color, Piece} from "chess.ts";
+import {isMobile} from "react-device-detect";
+import clsx from "clsx";
+
 import {gameSubject, initGame, resetGame} from "../game/config";
 import {Board} from "../../entities/Board/ui/Board";
-import type {Color, Piece} from "chess.ts";
 
-import classes from './App.module.css'
+import classes from "./App.module.css"
+
 
 export function App() {
     const [board, setBoard] = useState<Piece[][]>([])
@@ -29,7 +33,7 @@ export function App() {
 
 
     return (
-        <div className={classes.container}>
+        <div className={clsx(classes.container, isMobile && classes.mobile)}>
             {isGameOver && (
                 <h2 className={classes.vertical}>
                     GAME OVER

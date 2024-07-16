@@ -1,8 +1,8 @@
 import React from "react";
 import {PieceSymbol} from "chess.ts";
 
-import {Promotion} from "../../../shared/types";
 import classes from "./PromotionPieces.module.css";
+import {Promotion} from "../../../shared/types";
 import {Square} from "../../Square/ui/Square";
 import {move} from "../../../app/game/config";
 
